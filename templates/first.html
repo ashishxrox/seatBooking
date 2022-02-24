@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1.0">
+	<link rel="stylesheet" type="text/css" href="../static/css/file1.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+	<title>1st Service</title>
+</head>
+<body>
+	<div class="loader_bg">
+		<div class="loader"></div>
+	</div>
+	<header>
+		<h1 class="logo">Lorem Ipsum.</h1>
+		<div class="group">
+			<ul class="navigation">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="./landing.html">Reserve Seats</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+			<ul class="action">
+				<div class="menuToggle">
+					<ion-icon name="menu-outline"></ion-icon>
+					<ion-icon name="close-outline"></ion-icon>
+				</div>
+			</ul>
+		</div>
+	</header>
+	<div class="confirm" id="confirmation">
+		<h3>You have sucessfully reserved a seat. You will recieve your seat number shortly via whatsapp.</h3>
+		<a href="./landing.html">Back</a>
+	</div>
+	<div id="blur">
+		<div class="banner page_banner">
+			<div class="bg">
+				<img src="../static/images/bg1.jpg" alt="background" class="cover">
+				<div class="content page_content">
+					<h2>Book Seats with Just One click.</h2>
+				</div>
+				<div class="box page_box">
+					
+					<form action="/form1" method="POST">
+						<div class="sNo" id="seat">
+							<label for='sNo'>Number of seats: </label>
+							<select name="sNo" id="sNo">
+								<option value="1">1</option>
+							  	<option value="2">2</option>
+							  	<option value="3">3</option>
+							  	<option value="4">4</option>
+							</select>
+							<p name="Go" class="submit" onclick="checkSeats()">GO</p>
+						</div>
+						<div class="entry1" id="en1">
+							<div class="label">
+								<label>Please Enter Your Details</label>
+							</div>
+							<input type="text" placeholder="Name" name="name" >
+							<input type="text" placeholder="Age" name="age">
+							<input type="text" placeholder="Contact(Whatsapp)" name="contact">
+						</div>
+						<div class="entries" id="en2">
+							<input type="text" placeholder="Name" name="name2" >
+							<input type="text" placeholder="Age" name="age2">
+						</div>
+						<div class="entries" id="en3">
+							<input type="text" placeholder="Name" name="name3" >
+							<input type="text" placeholder="Age" name="age3">
+						</div>
+						<div class="entries" id="en4">
+							<input type="text" placeholder="Name" name="name4" >
+							<input type="text" placeholder="Age" name="age4">
+						</div>
+						<input type="submit" name="submit" class= "submit" id="submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../static/js/file1.js"></script>
+	<script type="text/javascript" src="../static/js/preloader.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script type="text/javascript">
+		let menuToggle = document.querySelector('.menuToggle');
+		let navigation = document.querySelector('.navigation');
+		menuToggle.onclick = function(){
+			menuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
+
+	</script>
+</body>
+</html>
